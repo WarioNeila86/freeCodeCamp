@@ -1,8 +1,18 @@
 <style>
+    :root {
+        --penguin-skin: gray;
+        --penguin-belly: pink;
+        --penguin-beak: orange;
+    }
+
+    body {
+        background: var(--penguin-belly, #c6faf1);
+    }
+
     .penguin {
-        --penguin-skin: black;
-        --penguin-belly: gray;
-        --penguin-beak: yellow;
+        /* Only change code below this line */
+        --penguin-belly: white;
+        /* Only change code above this line */
         position: relative;
         margin: auto;
         display: block;
@@ -11,14 +21,37 @@
         height: 300px;
     }
 
+    .right-cheek {
+        top: 15%;
+        left: 35%;
+        background: var(--penguin-belly, pink);
+        width: 60%;
+        height: 70%;
+        border-radius: 70% 70% 60% 60%;
+    }
+
+    .left-cheek {
+        top: 15%;
+        left: 5%;
+        background: var(--penguin-belly, pink);
+        width: 60%;
+        height: 70%;
+        border-radius: 70% 70% 60% 60%;
+    }
+
+    .belly {
+        top: 60%;
+        left: 2.5%;
+        background: var(--penguin-belly, pink);
+        width: 95%;
+        height: 100%;
+        border-radius: 120% 120% 100% 100%;
+    }
+
     .penguin-top {
         top: 10%;
         left: 25%;
-
-        /* Change code below this line */
-        background: var(--pengiun-skin, black);
-        /* Change code above this line */
-
+        background: var(--penguin-skin, gray);
         width: 50%;
         height: 45%;
         border-radius: 70% 70% 60% 60%;
@@ -27,11 +60,7 @@
     .penguin-bottom {
         top: 40%;
         left: 23.5%;
-
-        /* Change code below this line */
-        background: var(--pengiun-skin, black);
-        /* Change code above this line */
-
+        background: var(--penguin-skin, gray);
         width: 53%;
         height: 45%;
         border-radius: 70% 70% 100% 100%;
@@ -40,7 +69,7 @@
     .right-hand {
         top: 0%;
         left: -5%;
-        background: var(--penguin-skin, black);
+        background: var(--penguin-skin, gray);
         width: 30%;
         height: 60%;
         border-radius: 30% 30% 120% 30%;
@@ -51,39 +80,12 @@
     .left-hand {
         top: 0%;
         left: 75%;
-        background: var(--penguin-skin, black);
+        background: var(--penguin-skin, gray);
         width: 30%;
         height: 60%;
         border-radius: 30% 30% 30% 120%;
         transform: rotate(-45deg);
         z-index: -1;
-    }
-
-    .right-cheek {
-        top: 15%;
-        left: 35%;
-        background: var(--penguin-belly, white);
-        width: 60%;
-        height: 70%;
-        border-radius: 70% 70% 60% 60%;
-    }
-
-    .left-cheek {
-        top: 15%;
-        left: 5%;
-        background: var(--penguin-belly, white);
-        width: 60%;
-        height: 70%;
-        border-radius: 70% 70% 60% 60%;
-    }
-
-    .belly {
-        top: 60%;
-        left: 2.5%;
-        background: var(--penguin-belly, white);
-        width: 95%;
-        height: 100%;
-        border-radius: 120% 120% 100% 100%;
     }
 
     .right-feet {
@@ -169,10 +171,6 @@
         width: 16%;
         height: 10%;
         border-radius: 50%;
-    }
-
-    body {
-        background: #c6faf1;
     }
 
     .penguin * {
